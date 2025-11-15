@@ -25,8 +25,18 @@ Stop pets from reaching your house (leftmost column) by strategically placing pl
 - Command line interface
 
 ## How to Play
+### Quick Start
+To run the game, simply execute the run script:
+```bash
+bash run.sh
+```
+
+### Manual Compilation (Alternative)
+If you prefer to compile manually:
 1. Compile the game: `javac -d bin src/*.java`
 2. Run the game: `java -cp bin pvpMain`
+
+### Game Instructions
 3. Collect suns to buy plants
 4. Place plants strategically to defend against pets
 5. Win by surviving for 5+ turns with no pets remaining
