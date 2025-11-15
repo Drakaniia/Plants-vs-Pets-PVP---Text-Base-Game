@@ -47,6 +47,37 @@ If you prefer to compile manually:
 - `info`: Display game help and instructions
 - `quit`: Exit the game
 
+## Sample Game Preview
+```
+=== Turn 3 ===
+Suns: 125
+  0 1 2 3 4 5 6 7 8
+0 . . . . . . . . .
+1 . . . . . . . . .
+2 . . S . . . . . .
+3 . . . . . . . . .
+4 . . . . . . . H . .
+
+Available Plants:
+- Sunflower (Cost: 50)
+- Peashooter (Cost: 100)
+
+Commands: 'place', 'info', 'quit'
+
+Enter command: place
+
+Plant options:
+1. Sunflower (Cost: 50)
+2. Peashooter (Cost: 100)
+3. Wallnut (Cost: 50)
+4. Splashy Fern (Cost: 150)
+Select plant (1-4): 2
+Enter row (0-4): 2
+Enter column (0-8): 4
+
+Placed Peashooter at (2,4)
+```
+
 ## File Structure
 - `Plant.java`: Abstract base class for all plants
 - `Sunflower.java`: Sunflower plant implementation
