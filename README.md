@@ -47,8 +47,6 @@ If you prefer to compile manually:
 - `info`: Display game help and instructions
 - `quit`: Exit the game
 
-## Sample Game Preview
-```
 === Turn 3 ===
 Suns: 125
   0 1 2 3 4 5 6 7 8
@@ -56,7 +54,7 @@ Suns: 125
 1 . . . . . . . . .
 2 . . S . . . . . .
 3 . . . . . . . . .
-4 . . . . . . . H . .
+4 . . . . . . . H .
 
 Available Plants:
 - Sunflower (Cost: 50)
@@ -76,19 +74,3 @@ Enter row (0-4): 2
 Enter column (0-8): 4
 
 Placed Peashooter at (2,4)
-```
-
-## File Structure
-- `Plant.java`: Abstract base class for all plants
-- `Sunflower.java`: Sunflower plant implementation
-- `Peashooter.java`: Peashooter plant implementation
-- `Wallnut.java`: Wallnut plant implementation
-- `SplashyFern.java`: Splashy Fern plant implementation
-- `Pet.java`: Abstract base class for all pets
-- `Bunny.java`: Bunny pet implementation
-- `Dog.java`: Dog pet implementation
-- `Hamster.java`: Hamster pet implementation
-- `Player.java`: Manages player resources and state
-- `GameBoard.java`: Manages the game grid
-- `Game.java`: Main game logic and loop
-- `pvpMain.java`: Entry point for the application

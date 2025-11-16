@@ -92,3 +92,4 @@ logs/
 /site/
 
 test-output/
+.aider*

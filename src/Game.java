@@ -4,11 +4,11 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Game {
-    private Player player;
-    private GameBoard board;
+    protected Player player;
+    protected GameBoard board;
     private Scanner scanner;
     private Random random;
-    private boolean gameRunning;
+    protected boolean gameRunning;
     
     public Game() {
         this.player = new Player();
@@ -75,7 +75,7 @@ public class Game {
         System.out.println("Thanks for playing Plants vs Pets!");
     }
     
-    private void displayGameState() {
+    protected void displayGameState() {
         System.out.println("\n=== Turn " + player.getGameTurn() + " ===");
         System.out.println("Suns: " + player.getSuns());
         board.displayBoard();
@@ -86,7 +86,7 @@ public class Game {
         System.out.println("\nCommands: 'place', 'info', 'quit'");
     }
     
-    private void handleUserInput() {
+    protected void handleUserInput() {
         System.out.print("\nEnter command: ");
         String input = "";
         try {
@@ -113,7 +113,7 @@ public class Game {
         }
     }
     
-    private void placePlant() {
+    protected void placePlant() {
         System.out.println("\nPlant options:");
         System.out.println("1. Sunflower (Cost: 50)");
         System.out.println("2. Peashooter (Cost: 100)");
@@ -189,7 +189,7 @@ public class Game {
         System.out.println("Placed " + selectedPlant.getName() + " at (" + row + "," + col + ")");
     }
     
-    private void generateSuns() {
+    protected void generateSuns() {
         // Go through each cell and check for sunflowers
         for (int row = 0; row < board.getRows(); row++) {
             for (int col = 0; col < board.getCols(); col++) {
@@ -201,7 +201,7 @@ public class Game {
         }
     }
     
-    private void movePets() {
+    protected void movePets() {
         // Create a temporary list to avoid concurrent modification
         List<Pet> petsToMove = new ArrayList<>();
         int[][] petPositions = new int[board.getRows()][board.getCols()];
@@ -285,7 +285,7 @@ public class Game {
         }
     }
     
-    private void plantsTakeAction() {
+    protected void plantsTakeAction() {
         for (int row = 0; row < board.getRows(); row++) {
             for (int col = 0; col < board.getCols(); col++) {
                 Plant plant = board.getPlantAt(row, col);
@@ -296,7 +296,7 @@ public class Game {
         }
     }
     
-    private void showHelp() {
+    protected void showHelp() {
         System.out.println("\n=== Plants vs Pets Help ===");
         System.out.println("Objective: Stop pets from reaching your house (left side)!");
         System.out.println("Collect suns to buy plants.");

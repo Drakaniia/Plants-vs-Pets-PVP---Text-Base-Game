@@ -8,8 +8,8 @@ javac -d bin src/*.java
 
 if [ $? -eq 0 ]; then
     echo "Compilation successful!"
-    echo "Starting Plants vs Pets game..."
-    java -cp bin pvpMain
+    echo "Starting demonstration of Plants vs Pets game..."
+    java -cp bin Demonstration
 else
     echo "Compilation failed!"
     echo "Please check your Java installation and source files."
