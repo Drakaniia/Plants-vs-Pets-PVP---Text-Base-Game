@@ -42,7 +42,9 @@ public class GameBoard {
     public void setPetAt(int row, int col, Pet pet) {
         if (isValidPosition(row, col)) {
             pets[row][col] = pet;
-            pet.setPosition(row, col);
+            if (pet != null) {
+                pet.setPosition(row, col);
+            }
         }
     }
     
